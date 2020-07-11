@@ -12,5 +12,8 @@ export class ShoppingListComponent {
         new ingredient("cheese", 5),
         new ingredient("meat", 2)
     ]
+    onIngredientAdded = (ingredient:ingredient) => {
+        this.ingredients.push(ingredient)
+    }
 
 }

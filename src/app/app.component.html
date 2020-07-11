@@ -5,9 +5,9 @@
 </div> -->
 
 <div class="container">
-  <app-header></app-header>
+  <app-header (toggleNavigation)="onToggleNavigation($event)"></app-header>
   <div class="col-12">
-    <app-recipe-book></app-recipe-book>
-    <app-shopping-list></app-shopping-list>
+    <app-recipe-book *ngIf="url==='recipes'"></app-recipe-book>
+    <app-shopping-list *ngIf="url==='shoppingList'"></app-shopping-list>
   </div>
 </div>

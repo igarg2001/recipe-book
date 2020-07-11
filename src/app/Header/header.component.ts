@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, Output, EventEmitter } from "@angular/core";
 
 @Component({
     selector: "app-header",
@@ -6,4 +6,9 @@ import { Component } from "@angular/core";
     styleUrls: ["./header.component.css"]
 })
 
-export class HeaderComponent {}
+export class HeaderComponent {
+    @Output() toggleNavigation = new EventEmitter<string>()
+    navigate = (url:string) => {
+        this.toggleNavigation.emit(url)
+    }
+}
